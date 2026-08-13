@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="An administrator organising classes, subjects and user records">
+  <defs>
+    <clipPath id="aRound"><circle cx="200" cy="200" r="176"/></clipPath>
+  </defs>
+
+  <circle cx="200" cy="200" r="176" fill="#e3f1eb"/>
+  <g clip-path="url(#aRound)">
+    <rect x="0" y="286" width="400" height="120" fill="#cfe4da"/>
+
+    <!-- filing shelf -->
+    <rect x="212" y="86" width="168" height="118" rx="8" fill="#f7f4ee" stroke="#1b2440" stroke-width="4"/>
+    <line x1="212" y1="145" x2="380" y2="145" stroke="#1b2440" stroke-width="4"/>
+    <rect x="226" y="100" width="26" height="34" rx="3" fill="#c9a227"/>
+    <rect x="258" y="100" width="26" height="34" rx="3" fill="#1d6f58"/>
+    <rect x="290" y="100" width="26" height="34" rx="3" fill="#b23a2b"/>
+    <rect x="322" y="100" width="26" height="34" rx="3" fill="#1b2440"/>
+    <rect x="226" y="158" width="120" height="8" rx="4" fill="#c8c0b1"/>
+    <rect x="226" y="176" width="88" height="8" rx="4" fill="#c8c0b1"/>
+
+    <!-- desk -->
+    <rect x="188" y="252" width="200" height="12" rx="6" fill="#c9a227"/>
+    <rect x="214" y="264" width="12" height="88" fill="#b08e1f"/>
+
+    <!-- roster card being placed -->
+    <g transform="rotate(-8 258 230)">
+      <rect x="228" y="206" width="72" height="48" rx="5" fill="#ffffff" stroke="#1b2440" stroke-width="3"/>
+      <circle cx="246" cy="222" r="8" fill="#c9a227"/>
+      <rect x="260" y="217" width="32" height="6" rx="3" fill="#1b2440" opacity=".55"/>
+      <rect x="236" y="238" width="56" height="6" rx="3" fill="#1b2440" opacity=".25"/>
+    </g>
+
+    <!-- admin figure -->
+    <path d="M112 240 h84 l12 120 h-38 l-16 -76 -16 76 h-38z" fill="#1b2440"/>
+    <rect x="120" y="352" width="46" height="14" rx="7" fill="#171d2c"/>
+    <rect x="166" y="352" width="46" height="14" rx="7" fill="#171d2c"/>
+
+    <!-- blazer -->
+    <path d="M112 154 q42 -18 84 0 l10 96 h-104z" fill="#36405a"/>
+    <path d="M140 150 l14 26 l14 -26 l-6 -6 h-16z" fill="#f7f4ee"/>
+    <path d="M148 176 l8 0 l-4 44z" fill="#c9a227"/>
+
+    <!-- reaching arm -->
+    <path d="M194 172 q40 8 48 42" fill="none" stroke="#36405a" stroke-width="20" stroke-linecap="round"/>
+    <circle cx="244" cy="218" r="11" fill="#f0c9a6"/>
+    <!-- clipboard arm -->
+    <path d="M114 172 q-18 30 0 56" fill="none" stroke="#36405a" stroke-width="20" stroke-linecap="round"/>
+    <g transform="rotate(10 96 236)">
+      <rect x="68" y="212" width="56" height="72" rx="5" fill="#f7f4ee" stroke="#1b2440" stroke-width="3"/>
+      <rect x="86" y="206" width="20" height="12" rx="3" fill="#c9a227"/>
+      <rect x="78" y="234" width="36" height="6" rx="3" fill="#1b2440" opacity=".35"/>
+      <rect x="78" y="250" width="30" height="6" rx="3" fill="#1b2440" opacity=".25"/>
+      <rect x="78" y="266" width="34" height="6" rx="3" fill="#1b2440" opacity=".25"/>
+    </g>
+    <circle cx="112" cy="230" r="11" fill="#f0c9a6"/>
+
+    <!-- head -->
+    <rect x="144" y="124" width="20" height="22" rx="8" fill="#f0c9a6"/>
+    <circle cx="154" cy="106" r="32" fill="#f0c9a6"/>
+    <path d="M122 104 q0 -34 32 -34 q32 0 32 34 l-8 -6 q-24 10 -48 2z" fill="#4a3320"/>
+    <circle cx="145" cy="106" r="3" fill="#1b2440"/>
+    <circle cx="165" cy="106" r="3" fill="#1b2440"/>
+    <path d="M147 118 q8 7 16 0" fill="none" stroke="#1b2440" stroke-width="3" stroke-linecap="round"/>
+    <!-- glasses -->
+    <circle cx="145" cy="106" r="9" fill="none" stroke="#1b2440" stroke-width="2.5"/>
+    <circle cx="165" cy="106" r="9" fill="none" stroke="#1b2440" stroke-width="2.5"/>
+    <line x1="154" y1="106" x2="156" y2="106" stroke="#1b2440" stroke-width="2.5"/>
+  </g>
+  <circle cx="200" cy="200" r="176" fill="none" stroke="#1b2440" stroke-width="4" stroke-opacity=".12"/>
+</svg>

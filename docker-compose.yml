@@ -1,0 +1,59 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: assignment-postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-assignmentdb}
+      POSTGRES_USER: ${POSTGRES_USER:-assignment_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-local_dev_password}
+    ports:
+      - "5433:5432"
+    volumes:
+      - assignment_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-assignment_user} -d ${POSTGRES_DB:-assignmentdb}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    container_name: assignment-api
+    build:
+      context: .
+      dockerfile: backend/AssignmentManagement.Api/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: Host=postgres;Port=5432;Database=${POSTGRES_DB:-assignmentdb};Username=${POSTGRES_USER:-assignment_user};Password=${POSTGRES_PASSWORD:-local_dev_password}
+      Jwt__Issuer: AssignmentManagement.Api
+      Jwt__Audience: AssignmentManagement.Client
+      Jwt__Key: ${JWT_KEY:-LOCAL-DOCKER-DEVELOPMENT-ONLY-KEY-CHANGE-ME-123456789}
+      Jwt__ExpireMinutes: 120
+      FrontendUrl: http://localhost:3000
+    ports:
+      - "8081:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  frontend:
+    container_name: assignment-frontend
+    build:
+      context: ./frontend
+    environment:
+      NODE_ENV: production
+      BACKEND_URL: http://api:8080
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+
+  tests:
+    image: mcr.microsoft.com/dotnet/sdk:8.0
+    working_dir: /src
+    volumes:
+      - ./:/src
+    command: ["dotnet", "test", "tests/AssignmentManagement.Tests/AssignmentManagement.Tests.csproj", "--configuration", "Release"]
+    profiles: ["test"]
+
+volumes:
+  assignment_pgdata:

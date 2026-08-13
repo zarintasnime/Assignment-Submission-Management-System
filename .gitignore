@@ -1,0 +1,38 @@
+# .NET build artifacts
+**/bin/
+**/obj/
+.vs/
+*.user
+*.suo
+TestResults/
+coverage/
+
+# Next.js / TypeScript
+frontend/node_modules/
+frontend/.next/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local secrets and environment overrides
+.env
+.env.local
+.env.*.local
+
+# NOTE: appsettings.Development.json IS committed on purpose. It holds only
+# local-development placeholders (a localhost connection string and a throwaway
+# JWT key) so that an evaluator can clone the repo and press F5 in Visual Studio
+# without hand-writing configuration. No production secret is ever committed;
+# real deployments override these through environment variables.
+
+# IDE / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Runtime uploads / generated packages
+uploads/
+*.zip

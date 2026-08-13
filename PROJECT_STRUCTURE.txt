@@ -1,0 +1,248 @@
+AssignmentManagementSystem_Final/
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── backend/
+│   ├── AssignmentManagement.Api/
+│   │   ├── Controllers/
+│   │   │   ├── AdminAuditLogsController.cs
+│   │   │   ├── AdminClassRoomsController.cs
+│   │   │   ├── AdminEnrollmentsController.cs
+│   │   │   ├── AdminOversightController.cs
+│   │   │   ├── AdminStudentsController.cs
+│   │   │   ├── AdminSubjectsController.cs
+│   │   │   ├── AdminTeacherAssignmentsController.cs
+│   │   │   ├── AdminTeachersController.cs
+│   │   │   ├── AdminUsersController.cs
+│   │   │   ├── AuthController.cs
+│   │   │   ├── DashboardController.cs
+│   │   │   ├── StudentAssignmentsController.cs
+│   │   │   ├── StudentSubmissionsController.cs
+│   │   │   ├── TeacherAssignmentsController.cs
+│   │   │   ├── TeacherEnrollmentsController.cs
+│   │   │   ├── TeacherMappingsController.cs
+│   │   │   ├── TeacherStudentsController.cs
+│   │   │   └── TeacherSubmissionsController.cs
+│   │   ├── Middleware/
+│   │   │   ├── GlobalExceptionMiddleware.cs
+│   │   │   └── SafeRequestLoggingMiddleware.cs
+│   │   ├── Properties/
+│   │   │   └── launchSettings.json
+│   │   ├── Services/
+│   │   │   └── CurrentUserService.cs
+│   │   ├── AssignmentManagement.Api.csproj
+│   │   ├── Dockerfile
+│   │   ├── Program.cs
+│   │   ├── appsettings.Development.json
+│   │   └── appsettings.json
+│   ├── AssignmentManagement.Application/
+│   │   ├── Abstractions/
+│   │   │   ├── IApplicationDbContext.cs
+│   │   │   ├── IAuditLogService.cs
+│   │   │   ├── ICurrentUserService.cs
+│   │   │   ├── IJwtTokenService.cs
+│   │   │   └── IPasswordHasher.cs
+│   │   ├── Common/
+│   │   │   ├── Exceptions/
+│   │   │   │   └── AppExceptions.cs
+│   │   │   └── Rules/
+│   │   │       └── BusinessRules.cs
+│   │   ├── DTOs/
+│   │   │   ├── AcademicDtos.cs
+│   │   │   ├── AssignmentDtos.cs
+│   │   │   ├── AuthDtos.cs
+│   │   │   ├── DashboardDtos.cs
+│   │   │   ├── SubmissionDtos.cs
+│   │   │   └── UserDtos.cs
+│   │   ├── Services/
+│   │   │   ├── AssignmentService.cs
+│   │   │   ├── AuditLogService.cs
+│   │   │   ├── AuditQueryService.cs
+│   │   │   ├── AuthService.cs
+│   │   │   ├── ClassRoomService.cs
+│   │   │   ├── DashboardService.cs
+│   │   │   ├── EnrollmentService.cs
+│   │   │   ├── GradingService.cs
+│   │   │   ├── ServiceInterfaces.cs
+│   │   │   ├── StudentService.cs
+│   │   │   ├── SubjectService.cs
+│   │   │   ├── SubmissionService.cs
+│   │   │   ├── TeacherAssignmentService.cs
+│   │   │   ├── TeacherService.cs
+│   │   │   └── UserService.cs
+│   │   ├── Validators/
+│   │   │   ├── AcademicValidators.cs
+│   │   │   ├── AssignmentValidators.cs
+│   │   │   └── AuthValidators.cs
+│   │   └── AssignmentManagement.Application.csproj
+│   ├── AssignmentManagement.Domain/
+│   │   ├── Entities/
+│   │   │   ├── Assignment.cs
+│   │   │   ├── AuditLog.cs
+│   │   │   ├── ClassRoom.cs
+│   │   │   ├── StudentEnrollment.cs
+│   │   │   ├── Subject.cs
+│   │   │   ├── Submission.cs
+│   │   │   ├── SubmissionAttachment.cs
+│   │   │   ├── SubmissionVersion.cs
+│   │   │   ├── TeacherAssignment.cs
+│   │   │   └── User.cs
+│   │   ├── Enums/
+│   │   │   ├── AssignmentStatus.cs
+│   │   │   ├── AuditAction.cs
+│   │   │   ├── SubmissionStatus.cs
+│   │   │   └── UserRole.cs
+│   │   └── AssignmentManagement.Domain.csproj
+│   └── AssignmentManagement.Infrastructure/
+│       ├── Persistence/
+│       │   ├── Configurations/
+│       │   │   ├── AssignmentConfiguration.cs
+│       │   │   ├── AuditLogConfiguration.cs
+│       │   │   ├── ClassRoomConfiguration.cs
+│       │   │   ├── StudentEnrollmentConfiguration.cs
+│       │   │   ├── SubjectConfiguration.cs
+│       │   │   ├── SubmissionAttachmentConfiguration.cs
+│       │   │   ├── SubmissionConfiguration.cs
+│       │   │   ├── SubmissionVersionConfiguration.cs
+│       │   │   ├── TeacherAssignmentConfiguration.cs
+│       │   │   └── UserConfiguration.cs
+│       │   ├── Migrations/
+│       │   │   ├── 202608110001_InitialCreate.Designer.cs
+│       │   │   ├── 202608110001_InitialCreate.cs
+│       │   │   └── AppDbContextModelSnapshot.cs
+│       │   ├── AppDbContext.cs
+│       │   └── DemoDataSeeder.cs
+│       ├── Security/
+│       │   ├── JwtOptions.cs
+│       │   ├── JwtTokenService.cs
+│       │   └── PasswordHasher.cs
+│       └── AssignmentManagement.Infrastructure.csproj
+├── docs/
+│   ├── DESIGN_DECISIONS.md
+│   ├── ERD_AND_RELATIONS.md
+│   ├── SECURITY_DESIGN.md
+│   └── TEST_MATRIX.md
+├── frontend/
+│   ├── app/
+│   │   ├── admin/
+│   │   │   └── page.tsx
+│   │   ├── api/
+│   │   │   └── [...path]/
+│   │   │       └── route.ts
+│   │   ├── dashboard/
+│   │   │   └── page.tsx
+│   │   ├── login/
+│   │   │   └── page.tsx
+│   │   ├── student/
+│   │   │   └── page.tsx
+│   │   ├── teacher/
+│   │   │   └── page.tsx
+│   │   ├── globals.css
+│   │   ├── icon.svg
+│   │   ├── layout.tsx
+│   │   ├── not-found.tsx
+│   │   └── page.tsx
+│   ├── components/
+│   │   ├── admin/
+│   │   │   ├── AuditLogsTable.tsx
+│   │   │   ├── ClassroomsTable.tsx
+│   │   │   ├── CreateClassroomForm.tsx
+│   │   │   ├── CreateSubjectForm.test.tsx
+│   │   │   ├── CreateSubjectForm.tsx
+│   │   │   ├── CreateUserForm.tsx
+│   │   │   ├── EnrollStudentForm.tsx
+│   │   │   ├── EnrollmentsTable.tsx
+│   │   │   ├── MapTeacherForm.tsx
+│   │   │   ├── SubjectsTable.tsx
+│   │   │   ├── TeacherMappingsTable.tsx
+│   │   │   └── UsersTable.tsx
+│   │   ├── enrollments/
+│   │   │   └── TeacherEnrollStudentForm.tsx
+│   │   ├── providers/
+│   │   │   └── AuthProvider.tsx
+│   │   ├── student/
+│   │   │   ├── AssignmentCard.tsx
+│   │   │   ├── SubmissionHistoryCard.tsx
+│   │   │   └── SubmissionModal.tsx
+│   │   ├── students/
+│   │   │   ├── CreateStudentForm.test.tsx
+│   │   │   ├── CreateStudentForm.tsx
+│   │   │   └── StudentsTable.tsx
+│   │   ├── teacher/
+│   │   │   ├── AssignmentCard.tsx
+│   │   │   ├── CreateAssignmentForm.tsx
+│   │   │   ├── EditAssignmentModal.tsx
+│   │   │   └── SubmissionReviewPanel.tsx
+│   │   ├── teachers/
+│   │   │   ├── CreateTeacherForm.test.tsx
+│   │   │   ├── CreateTeacherForm.tsx
+│   │   │   ├── TeachersTable.test.tsx
+│   │   │   └── TeachersTable.tsx
+│   │   ├── ui/
+│   │   │   ├── ConfirmModal.tsx
+│   │   │   ├── FormField.test.tsx
+│   │   │   ├── FormField.tsx
+│   │   │   ├── Modal.tsx
+│   │   │   ├── Pagination.test.tsx
+│   │   │   ├── Pagination.tsx
+│   │   │   ├── TableToolbar.tsx
+│   │   │   └── WorkflowStepper.tsx
+│   │   ├── AppShell.test.tsx
+│   │   ├── AppShell.tsx
+│   │   ├── ErrorBoundary.test.tsx
+│   │   ├── ErrorBoundary.tsx
+│   │   ├── States.tsx
+│   │   ├── StatusChip.tsx
+│   │   ├── SubmitButton.test.tsx
+│   │   ├── SubmitButton.tsx
+│   │   ├── SummaryCard.tsx
+│   │   ├── Toast.test.tsx
+│   │   └── Toast.tsx
+│   ├── lib/
+│   │   ├── api/
+│   │   │   ├── enrollments.ts
+│   │   │   ├── students.ts
+│   │   │   └── teachers.ts
+│   │   ├── api.test.ts
+│   │   ├── api.ts
+│   │   ├── format.ts
+│   │   └── types.ts
+│   ├── public/
+│   │   ├── illustrations/
+│   │   │   ├── admin.svg
+│   │   │   ├── classroom.svg
+│   │   │   ├── student.svg
+│   │   │   └── teacher.svg
+│   │   └── .gitkeep
+│   ├── test/
+│   │   └── setup.ts
+│   ├── .dockerignore
+│   ├── .env.local
+│   ├── .env.local.example
+│   ├── .eslintrc.json
+│   ├── Dockerfile
+│   ├── next-env.d.ts
+│   ├── next.config.mjs
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── tsconfig.json
+│   └── vitest.config.ts
+├── tests/
+│   └── AssignmentManagement.Tests/
+│       ├── ApiControllerIntegrationTests.cs
+│       ├── AssignmentManagement.Tests.csproj
+│       ├── BusinessRuleTests.cs
+│       ├── StudentServiceTests.cs
+│       ├── TeacherServiceTests.cs
+│       ├── TestSupport.cs
+│       ├── UserServiceTests.cs
+│       ├── Usings.cs
+│       └── WorkflowServiceTests.cs
+├── .dockerignore
+├── .editorconfig
+├── .env.example
+├── .gitignore
+├── AssignmentManagement.sln
+├── PROJECT_STRUCTURE.txt
+├── README.md
+└── docker-compose.yml

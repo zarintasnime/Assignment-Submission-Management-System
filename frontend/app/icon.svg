@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#c9a227"/>
+  <path d="M10 54 L10 12 L54 12" fill="none" stroke="#1b2440" stroke-width="3" stroke-opacity=".18"/>
+  <text x="32" y="43" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="30" font-weight="700" fill="#1b2440">CF</text>
+</svg>

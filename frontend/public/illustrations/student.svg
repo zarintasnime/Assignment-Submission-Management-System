@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="A student with a backpack submitting work on a laptop">
+  <defs>
+    <clipPath id="sRound"><circle cx="200" cy="200" r="176"/></clipPath>
+  </defs>
+
+  <circle cx="200" cy="200" r="176" fill="#e7ecf6"/>
+  <g clip-path="url(#sRound)">
+    <rect x="0" y="286" width="400" height="120" fill="#d8e0ee"/>
+
+    <!-- desk -->
+    <rect x="188" y="268" width="196" height="12" rx="6" fill="#c9a227"/>
+    <rect x="212" y="280" width="12" height="72" fill="#b08e1f"/>
+    <rect x="344" y="280" width="12" height="72" fill="#b08e1f"/>
+
+    <!-- laptop on desk -->
+    <path d="M232 268 l14 -60 h96 l14 60z" fill="#36405a"/>
+    <rect x="248" y="196" width="92" height="66" rx="5" fill="#1b2440"/>
+    <rect x="258" y="208" width="40" height="7" rx="3.5" fill="#c9a227"/>
+    <rect x="258" y="223" width="66" height="6" rx="3" fill="#ffffff" opacity=".45"/>
+    <rect x="258" y="236" width="52" height="6" rx="3" fill="#ffffff" opacity=".3"/>
+    <rect x="258" y="249" width="34" height="8" rx="4" fill="#1d6f58"/>
+
+    <!-- backpack -->
+    <rect x="86" y="168" width="56" height="86" rx="22" fill="#b23a2b"/>
+    <rect x="94" y="204" width="40" height="26" rx="8" fill="#f7e4df"/>
+
+    <!-- student figure -->
+    <path d="M118 244 h78 l10 116 h-36 l-13 -74 -13 74 h-36z" fill="#36405a"/>
+    <rect x="128" y="352" width="46" height="14" rx="7" fill="#1b2440"/>
+    <rect x="172" y="352" width="46" height="14" rx="7" fill="#1b2440"/>
+
+    <!-- hoodie torso -->
+    <path d="M120 156 q40 -18 80 0 l10 98 h-100z" fill="#1b2440"/>
+    <path d="M144 152 q16 22 32 0 l-6 -8 h-20z" fill="#e7ecf6"/>
+    <rect x="150" y="196" width="20" height="30" rx="10" fill="#36405a"/>
+
+    <!-- typing arm -->
+    <path d="M198 176 q40 12 46 44" fill="none" stroke="#1b2440" stroke-width="20" stroke-linecap="round"/>
+    <circle cx="246" cy="224" r="11" fill="#e8b98f"/>
+    <!-- other arm -->
+    <path d="M122 176 q-14 34 4 56" fill="none" stroke="#1b2440" stroke-width="20" stroke-linecap="round"/>
+    <circle cx="128" cy="234" r="11" fill="#e8b98f"/>
+
+    <!-- head -->
+    <rect x="150" y="126" width="20" height="22" rx="8" fill="#e8b98f"/>
+    <circle cx="160" cy="108" r="32" fill="#e8b98f"/>
+    <path d="M128 106 q0 -34 32 -34 q32 0 32 34 q-6 -14 -32 -14 q-26 0 -32 14z" fill="#1f1a17"/>
+    <circle cx="151" cy="108" r="3" fill="#1b2440"/>
+    <circle cx="171" cy="108" r="3" fill="#1b2440"/>
+    <path d="M153 120 q8 7 16 0" fill="none" stroke="#1b2440" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- backpack strap -->
+    <path d="M138 156 q-6 44 -2 74" fill="none" stroke="#b23a2b" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <circle cx="200" cy="200" r="176" fill="none" stroke="#1b2440" stroke-width="4" stroke-opacity=".12"/>
+</svg>
