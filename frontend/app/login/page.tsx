@@ -46,7 +46,7 @@ export default function LoginPage() {
     }
   }
 
-  function useDemo(role: UserRole) {
+  function applyDemo(role: UserRole) {
     const demo = demos.find((item) => item.role === role);
     if (!demo) return;
     setEmail(demo.email);
@@ -91,7 +91,7 @@ export default function LoginPage() {
                 key={demo.role}
                 type="button"
                 className="demo-role-button"
-                onClick={() => useDemo(demo.role)}
+                onClick={() => applyDemo(demo.role)}
               >
                 {demo.role}
               </button>
