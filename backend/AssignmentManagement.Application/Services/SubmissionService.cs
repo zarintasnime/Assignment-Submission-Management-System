@@ -161,9 +161,8 @@ public sealed class SubmissionService(
             SubmittedAt = now
         };
 
-        // The submission aggregate is tracked, so adding to the navigation collection is
-        // enough for EF Core to mark the new version as Added.
-        submission.SubmissionVersions.Add(version);
+        // The submission aggregate is tracked, so adding via DbSet
+        db.SubmissionVersions.Add(version);
 
         submission.CurrentVersion = nextVersion;
         submission.LastSubmittedAt = now;
