@@ -1,10 +1,6 @@
-::: {align="center"}
+🚀 Assignment & Submission Management System
 
-Assignment & Submission Management System
-
- Full-Stack Academic Workflow Platform
-
-:::
+Full-Stack Academic Workflow Platform
 
 A recruitment-focused full-stack school/college assignment workflow
 built with ASP.NET Core 8 Web API, C#, EF Core 8, PostgreSQL,
@@ -22,8 +18,6 @@ docs/CHANGES_APPLIED.md.
 Quick Start --- Docker (recommended for evaluation)
 
 Prerequisite: Docker Desktop / Docker Engine with Compose support.
-
-bash
 
 docker compose up --build -d
 docker compose ps
@@ -250,13 +244,9 @@ covering the API client, form components and table rendering.
 
 Run tests without installing the .NET SDK locally:
 
-bash
-
 docker compose --profile test run --rm tests
 
 Or, with .NET 8 SDK installed:
-
-bash
 
 dotnet restore AssignmentManagement.sln
 dotnet build AssignmentManagement.sln --configuration Release
@@ -269,8 +259,6 @@ coding/debugging.
 
 Start only PostgreSQL:
 
-bash
-
 docker compose up -d postgres
 
 Then run the API from Visual Studio using the AssignmentManagement.Api
@@ -281,8 +269,6 @@ API: http://localhost:8081
 PostgreSQL: localhost:5433
 
 For the frontend:
-
-bash
 
 cd frontend
 npm install
@@ -306,8 +292,6 @@ deployments override every value through environment variables, as
 docker-compose.yml already demonstrates.
 
 Common Docker Commands
-
-bash
 
 # start or rebuild the complete stack
 docker compose up --build -d
@@ -510,8 +494,6 @@ Submission Checklist
 
 Before handing the repository/ZIP to an evaluator, run from a fresh
 database:
-
-bash
 
 docker compose down -v
 docker compose up --build -d
