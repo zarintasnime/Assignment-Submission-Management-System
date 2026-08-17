@@ -1,4 +1,4 @@
-🚀 Assignment & Submission Management System
+# 🚀 Assignment & Submission Management System
 
 Full-Stack Academic Workflow Platform
 
